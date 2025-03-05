@@ -1,0 +1,6 @@
+extraConfigMaps:
+  '{{ .Release.Name }}-dev-airflow-variables':
+    data: |-
+      AIRFLOW_VAR_HELLO_MESSAGE: 'Hi!'
+      AIRFLOW_VAR_KUBERNETES_NAMESPACE: '{{ .Release.Namespace }}'
+      AIRFLOW_VAR_ENV_DEV: "Hola desde dev" 
