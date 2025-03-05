@@ -1,0 +1,7 @@
+# This the values.yaml file for installing Apache Airflow in a Kubernetes cluster using the Helm chart.
+extraConfigMaps:
+  '{{ .Release.Name }}-common-airflow-variables':
+    data: |-
+      AIRFLOW_VAR_HELLO_MESSAGE: 'Hi!'
+      AIRFLOW_VAR_KUBERNETES_NAMESPACE: '{{ .Release.Namespace }}'
+      AIRFLOW_VAR_ENV_COMMON: "Hola desde common" 
